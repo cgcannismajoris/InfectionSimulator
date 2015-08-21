@@ -18,7 +18,8 @@ SOURCES += main.cpp\
     control/maincontrol.cpp \
     vision/mainwindow.cpp \
     vision/qcustomplot.cpp \
-    model/graphdata.cpp
+    model/graphdata.cpp \
+    model/virusresistance.cpp
 
 HEADERS  += \
     model/orderedPair.h \
@@ -27,7 +28,8 @@ HEADERS  += \
     control/maincontrol.h \
     vision/mainwindow.h \
     vision/qcustomplot.h \
-    model/graphdata.h
+    model/graphdata.h \
+    model/virusresistance.h
 
 FORMS    += \
     vision/mainwindow.ui

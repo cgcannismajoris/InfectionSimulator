@@ -17,6 +17,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
     public:
+        int actualMaxTime;
         explicit MainWindow(QWidget *parent = 0);
         ~MainWindow();
 
@@ -30,10 +31,22 @@ class MainWindow : public QMainWindow
 
         void on_actionSalvar_triggered();
 
+        void on_leProporcionalityConstant_textEdited(const QString &arg1);
+
+        void on_leQtdPeoples_textEdited(const QString &arg1);
+
+        void on_cbResistance_toggled(bool checked);
+
+        void on_sbAlphaConst_valueChanged(int arg1);
+
+        void on_cbRealTime_toggled(bool checked);
+
 private:
             Ui::MainWindow *ui;
             mainControl *control = NULL;
-            void updateGraph();
+            void updateGraph(int startTime);
+            void updateGraph_virusSpread(int startTime);
+            void updateGraph_virusResistance(int startTime);
             void requestSavePng();
 };
 

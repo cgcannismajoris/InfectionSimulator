@@ -6,6 +6,7 @@
 #include <QVector>
 #include <QString>
 
+#include "../model/virusresistance.h"
 #include "../model/virusspread.h"
 #include "../model/graphdata.h"
 
@@ -15,7 +16,8 @@ class mainControl
         mainControl();
         ~mainControl();
 
-        graphData *process(QString strNumOfPeople, QString strPConstant, int resolution, int maxTime);
+        graphData *processVirusSpread(QString strNumOfPeople, QString strPConstant, int resolution, int startTime, int maxTime);
+        graphData *processVirusResistance(QString strNumOfPeople, QString strPConstant, int resolution, int startTime, int maxTime, int alfaConst);
 };
 
 #endif // MAINCONTROL_H
